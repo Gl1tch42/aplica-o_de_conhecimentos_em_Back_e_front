@@ -1,0 +1,26 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "serve.js",
+  "scripts": {
+    "start": "nodemon src/serve.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gl1tch42/aplica-o_de_conhecimentos_em_Back_e_front.git"
+  },
+  "author": "Jean Michel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gl1tch42/aplica-o_de_conhecimentos_em_Back_e_front/issues"
+  },
+  "homepage": "https://github.com/Gl1tch42/aplica-o_de_conhecimentos_em_Back_e_front#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.10.17",
+    "nodemon": "^2.0.6"
+  }
+}
