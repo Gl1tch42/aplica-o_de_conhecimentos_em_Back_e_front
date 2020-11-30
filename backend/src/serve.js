@@ -14,8 +14,8 @@ mongoose.connect('mongodb://localhost:27017/API_BASIC',{
  * rotas principais
  */
 const postController = require('./routes/postRoutes');
-app.use('/post', postController);
 
+app.use('/post', postController);
 
 
 app.listen(port);
