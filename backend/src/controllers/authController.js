@@ -64,9 +64,13 @@ const userCtrl = {
 
             return res.json({accessToken});
         } catch (err) {
-            return res.status(500).json({msg: "Try register again"})
+            return res.status(500).json({msg: "Try register again"});
         }
+    },
 
 
-    }
+
+
 }
+
+module.exports = userCtrl;
