@@ -12,14 +12,16 @@
     "url": "git+https://github.com/Gl1tch42/aplica-o_de_conhecimentos_em_Back_e_front.git"
   },
   "author": "Jean Michel",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/Gl1tch42/aplica-o_de_conhecimentos_em_Back_e_front/issues"
   },
   "homepage": "https://github.com/Gl1tch42/aplica-o_de_conhecimentos_em_Back_e_front#readme",
   "dependencies": {
+    "bcrypt": "^5.0.0",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.10.17",
     "nodemon": "^2.0.6"
   }
