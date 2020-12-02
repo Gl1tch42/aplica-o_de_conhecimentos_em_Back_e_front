@@ -1,4 +1,5 @@
 const Post = require('./../models/post');
+const User = require('./../models/user');
 
 const postCtrl = {
     /**
@@ -6,7 +7,11 @@ const postCtrl = {
      */
     creatPost: async (req, res) => {
         try {
+            const user = await User.findOne({_id: req.user.id});
             const post = await new Post(req.body);
+
+            post.author.id = user._id;
+            post.author.name = user.name;
 
             post.save((err, post) => {
                 if(err) {
