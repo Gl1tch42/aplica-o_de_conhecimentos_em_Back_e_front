@@ -20,7 +20,7 @@ const userSchema = mongoose.Schema({
         default:0
     },
     stars: {
-        type:Number
+        type: Number
      },
      starsGivenUsers: {
          name: String,

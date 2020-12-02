@@ -3,19 +3,27 @@ const app = require('./app');
 const port = process.env.PORT || 5569;
 require('dotenv').config();
 
-mongoose.connect('mongodb://localhost:27017/API_BASIC',{
+
+mongoose.connect(process.env.MONGODB_URL,{
+
     useNewUrlParser: true,
+    useCreateIndex: true,
+    useFindAndModify: false,
     useUnifiedTopology: true
+
 },err => {
         if (err) throw err
         console.log('dataBase are connect!');
 });
+
+
 /**
  * rotas principais
  */
+
 const postController = require('./routes/postRoutes');
 const techController = require('./routes/techRoutes');
-const authController = require('./routes/');
+const authController = require('./routes/authRoutes');
 
 app.use('/post', postController);
 app.use('/tech', techController);
