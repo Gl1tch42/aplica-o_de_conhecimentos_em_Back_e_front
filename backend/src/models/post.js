@@ -13,7 +13,13 @@ const blogSchema = new mongoose.Schema({
       ref: "User"
     },
     body: String,
-    comments: [{ body: String, date: Date }],
+    comments: [{ 
+      body: String, 
+      author: {
+        name: String,
+        id: String,
+      }
+    },{timestamps: true}],
     meta: {
       stars: Number,
     }

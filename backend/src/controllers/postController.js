@@ -82,8 +82,26 @@ const postCtrl = {
                 error: 'bad request, it is not possible complete action delete'
             });
         }
-    }
+    },
 
+    /**
+     * comentarios
+     */
+    createComent: async (req, res) => {
+        try {
+            const user = await User.findOne({_id: req.user.id});
+            const post = await Post.findByIdAndUpdate({_id: req.params.id},{comments});
+
+
+
+        }catch (err) {
+            return res.status(400).json({
+                error: 'bad request, it is not possible complete action comments'
+            });
+        }
+        
+
+    }
 
     
 }
